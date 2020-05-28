@@ -38,9 +38,9 @@ vcs_info_wrapper() {
 	fi
 }
 RPROMPT=$'$(vcs_info_wrapper)'
-eval `dircolors /home/tic-tac/.dircolors-moonshine`
+eval `dircolors ${ZDOTDIR:-$HOME}/.dircolors-moonshine`
 alias rm="rm -v"
-PATH=$PATH:$HOME/.installs/intelFPGA/quartus/bin:/home/tic-tac/.local/bin
+PATH=$PATH:${ZDOTDIR:-$HOME}/.installs/intelFPGA/quartus/bin:${ZDOTDIR:-$HOME}/.local/bin
 alias quartus64="quartus --64bit"
 alias ll='ls -l'
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
